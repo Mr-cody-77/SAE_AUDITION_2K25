@@ -153,7 +153,6 @@ const RegisterPage = () => {
         audition_url,
         formData,
         {
-          method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formData),
         }
@@ -162,7 +161,7 @@ const RegisterPage = () => {
       const scriptURL = SHEET_URL; // Your Google 
       const sheetId = SHEET_ID;  // Your Google Sheet ID
       try {
-        const response = await fetch(scriptURL, {
+        const response2 = await fetch(scriptURL, {
           method: 'POST',
           body: new URLSearchParams(formData),
           headers: {
@@ -170,17 +169,15 @@ const RegisterPage = () => {
           }
         });
 
-        if (!response.ok) {
+        if (!response2.ok) {
           throw new Error('Network response was not ok');
         }
-        const result = await response.json();
+        const result = await response2.json();
         console.log('Success:', result);
         // alert('Form submitted successfully!');
       } catch (error) {
         console.error('Error submitting form:', error);
         alert('There was an error submitting the form.');
-      } finally {
-        setLoading(false); // Hide loading overlay
       }
       try {
             const send_email_url = API_ENDPOINT_URL + "api/send-email-to-user/";
