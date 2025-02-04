@@ -77,7 +77,7 @@ const Navbar = () => {
         >
           Register
         </NavLink>
-        <NavLink
+        {/* <NavLink
           to="/adminlogin"
           className={({ isActive }) =>
             isActive ? "navlink active" : "navlink"
@@ -85,7 +85,7 @@ const Navbar = () => {
           onClick={() => setIsSidebarOpen(false)}
         >
           Admin login
-        </NavLink>
+        </NavLink> */}
       </div>
     </nav>
   );
