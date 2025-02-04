@@ -8,39 +8,38 @@ import LoadingOverlay from "../../components/LoadingOverlay/LoadingOverlay";
 const AdminLogin = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [otp, setOtp] = useState(""); //saeindia@nitdgp.ac.in
-  const [email, setEmail] = useState("saeindia@nitdgp.ac.in"); // saeindia@nitdgp.ac.in
+  // const [otp, setOtp] = useState(""); //saeindia@nitdgp.ac.in
+  // const [email, setEmail] = useState("saeindia@nitdgp.ac.in"); // saeindia@nitdgp.ac.in
   const [error, setError] = useState(null);
   const [isOtpSent, setIsOtpSent] = useState(false); // To track OTP sent status
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
-  const SUPER_USER = import.meta.env.VITE_SUPER_USER;
-  const SUPER_PASS = import.meta.env.VITE_SUPER_PASS;
   const API_ENDPOINT_URL = import.meta.env.VITE_API_URL;
   const [token, setToken] = useState(null);
 
   // Function to handle sending OTP
-  const sendOtp = async (token) => {
-    setLoading(true);
-    try {
-      const send_otp_url = `${API_ENDPOINT_URL}api/send-otp/`;
-      const response = await axios.post(
-        send_otp_url,
-        { email },
-        { headers: { Authorization: `Bearer ${token}` } }
-      );
+  // const sendOtp = async (token) => {
+  //   setLoading(true);
+  //   try {
+  //     const send_otp_url = `${API_ENDPOINT_URL}api/send-otp/`;
+  //     const response = await axios.post(
+  //       send_otp_url,
+  //       { email },
+        
+  //       { headers: { Authorization: `Bearer ${token}` } }
+  //     );
 
-      if (response.status === 200) {
-        setIsOtpSent(true);
-      } else {
-        setError("Failed to send OTP.");
-      }
-    } catch (error) {
-      setError("Error sending OTP. Try again.");
-    } finally {
-      setLoading(false);
-    }
-  };
+  //     if (response.status === 200) {
+  //       setIsOtpSent(true);
+  //     } else {
+  //       setError("Failed to send OTP.");
+  //     }
+  //   } catch (error) {
+  //     setError("Error sending OTP. Try again.");
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
 
   // Function to handle login form submission
   const handleLogin = async (e) => {
