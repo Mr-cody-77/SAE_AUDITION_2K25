@@ -18,28 +18,28 @@ const AdminLogin = () => {
   const [token, setToken] = useState(null);
 
   // Function to handle sending OTP
-  // const sendOtp = async (token) => {
-  //   setLoading(true);
-  //   try {
-  //     const send_otp_url = `${API_ENDPOINT_URL}api/send-otp/`;
-  //     const response = await axios.post(
-  //       send_otp_url,
-  //       { email },
+  const sendOtp = async (token) => {
+    setLoading(true);
+    try {
+      const send_otp_url = `${API_ENDPOINT_URL}api/send-otp/`;
+      const response = await axios.post(
+        send_otp_url,
+        { email },
         
-  //       { headers: { Authorization: `Bearer ${token}` } }
-  //     );
+        { headers: { Authorization: `Bearer ${token}` } }
+      );
 
-  //     if (response.status === 200) {
-  //       setIsOtpSent(true);
-  //     } else {
-  //       setError("Failed to send OTP.");
-  //     }
-  //   } catch (error) {
-  //     setError("Error sending OTP. Try again.");
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
+      if (response.status === 200) {
+        setIsOtpSent(true);
+      } else {
+        setError("Failed to send OTP.");
+      }
+    } catch (error) {
+      setError("Error sending OTP. Try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   // Function to handle login form submission
   const handleLogin = async (e) => {
