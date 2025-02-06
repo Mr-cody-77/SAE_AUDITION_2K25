@@ -103,6 +103,7 @@ const AdminDashboard = () => {
           const search_url = API_ENDPOINT_URL+"api/search/";
           const response = await axios.get(search_url, {
             params: { Namequery },
+            headers: { Authorization: `Bearer ${token}` }
           });
           setSubmittedData(response.data);
         } catch (error) {
@@ -114,6 +115,7 @@ const AdminDashboard = () => {
           const search_url = API_ENDPOINT_URL+"api/search/";
           const response = await axios.get(search_url, {
             params: { Rollquery },
+            headers: { Authorization: `Bearer ${token}` }
           });
           setSubmittedData(response.data);
         } catch (error) {
@@ -125,6 +127,7 @@ const AdminDashboard = () => {
           const search_url = API_ENDPOINT_URL+"api/search/";
           const response = await axios.get(search_url, {
             params: { Domainquery },
+            headers: { Authorization: `Bearer ${token}` }
           });
           setSubmittedData(response.data);
         } catch (error) {
@@ -136,6 +139,7 @@ const AdminDashboard = () => {
           const search_url = API_ENDPOINT_URL+"api/search/";
           const response = await axios.get(search_url, {
             params: { Genderquery },
+            headers: { Authorization: `Bearer ${token}` }
           });
           setSubmittedData(response.data);
         } catch (error) {
