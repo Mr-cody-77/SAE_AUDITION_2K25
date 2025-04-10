@@ -11,7 +11,7 @@ const AdminDashboard = () => {
     const [Genderquery, setGenderquery] = useState('');
     const API_ENDPOINT_URL = import.meta.env.VITE_API_URL;
     // const [token, setToken] = useState(localStorage.getItem('accessToken'));
-    const token = localStorage.getItem("accessToken");
+    // const token = localStorage.getItem("accessToken");
     console.log("Access Token:", localStorage.getItem("accessToken"));
     console.log("Refresh Token:", localStorage.getItem("refreshToken"));
 

@@ -66,11 +66,11 @@ function App() {
         <Route 
           path="/sae-admin-dashboard"
           element={
-            <PrivateRoute>
+            // <PrivateRoute>
             <MainLayout>
               <AdminDashboard />
             </MainLayout>
-            </PrivateRoute>
+            // </PrivateRoute>
           }
         />
         <Route

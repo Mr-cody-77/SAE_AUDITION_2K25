@@ -86,6 +86,15 @@ const Navbar = () => {
         >
           Admin login
         </NavLink>
+        <NavLink
+          to="/dashboard"
+          className={({ isActive }) =>
+            isActive ? "navlink active" : "navlink"
+          }
+          onClick={() => setIsSidebarOpen(false)}
+        >
+          Dashboard
+        </NavLink>
       </div>
     </nav>
   );
