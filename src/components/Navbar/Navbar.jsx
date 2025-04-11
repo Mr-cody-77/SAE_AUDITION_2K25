@@ -86,7 +86,7 @@ const Navbar = () => {
         >
           Admin login
         </NavLink>
-        <NavLink
+        {/* <NavLink
           to="/dashboard"
           className={({ isActive }) =>
             isActive ? "navlink active" : "navlink"
@@ -94,7 +94,7 @@ const Navbar = () => {
           onClick={() => setIsSidebarOpen(false)}
         >
           Dashboard
-        </NavLink>
+        </NavLink> */}
       </div>
     </nav>
   );
