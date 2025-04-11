@@ -154,7 +154,7 @@ const RegisterPage = () => {
         formData,
         {
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
+          // body: JSON.stringify(formData),
         }
       );
       const SHEET_URL = import.meta.env.VITE_SCRIPT_URL;
