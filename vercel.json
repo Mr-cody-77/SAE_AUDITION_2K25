@@ -1,6 +1,8 @@
-
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
-  ]
+  {
+    "source": "/api/(.*)",
+    "destination": "https://sae-audition-backend.onrender.com/api/$1"
+  }
+]
 }
